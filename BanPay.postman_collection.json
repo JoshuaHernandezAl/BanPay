@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "a63bab50-f2bf-4191-ab5b-50e286368c1e",
+		"name": "BanPay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16053392"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Joshua\",\n    \"roles\": [\"films\", \"locations\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "FindAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/api/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "FindOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:3000/api/user/18412be4-ffb6-4a7d-97cf-6b16a03fabf1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:3000/api/user/a47036d0-acb0-423a-8d06-cad0c31ed644"
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"Joshua\",\n    \"roles\": [\"films\", \"locations\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/user/179af705-ec65-41b9-bd44-76dfb942f18a"
+			},
+			"response": []
+		},
+		{
+			"name": "Get to Ghibli",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/studio-ghibli/joshua/people?idGhibli=267649ac-fb1b-11eb-9a03-0242ac130003&people=id,name,eye_color",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"studio-ghibli",
+						"joshua",
+						"people"
+					],
+					"query": [
+						{
+							"key": "idGhibli",
+							"value": "267649ac-fb1b-11eb-9a03-0242ac130003"
+						},
+						{
+							"key": "limit",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "films",
+							"value": "id,title,original_title",
+							"disabled": true
+						},
+						{
+							"key": "people",
+							"value": "id,name,eye_color"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
